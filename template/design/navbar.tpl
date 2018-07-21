@@ -18,7 +18,7 @@
                     {if $val.user.connect eq 1}
                     <li>
                         <!-- Dropdown Trigger -->
-                        <a href='index.php?page=web_profils.php&id={$val.user.id}'>
+                        <a href='index.php?page=panel.php'>
                             <img src="https://crafatar.com/avatars/{$val.user.uuid}?size=35" class="rounded-circle"> {$val.user.pseudo}
                         </a>
                     </li>
