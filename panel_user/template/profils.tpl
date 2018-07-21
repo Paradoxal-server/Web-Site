@@ -102,7 +102,7 @@
                                 <h2 class="text-light display-6">Modification du profils</h2>
                             </div>
                             <div class="card-body card-block">
-                                <form action="" method="post" class="form-horizontal">
+                                <form id="modif" action="" method="post" class="form-horizontal">
                                     <div class="row form-group">
                                         <div class="col col-md-3">
                                             <label for="text-input" class=" form-control-label">Pseudo</label>
@@ -139,6 +139,19 @@
                                         </button>
                                     </div>
                                 </form>
+                                <script>
+                                    $( "#modif" ).submit(function( event ) {
+                                        event.preventDefault();
+                                        $.ajax({
+                                            type: "POST",
+                                            url: "modif.php",
+                                            data: $("#modif").serialize(),
+                                            success: function (data) {
+                                                eval(data);
+                                            },
+                                        });
+                                    });
+                                </script>
                             </div>
                         </div>
                         <div class="card">
@@ -146,7 +159,7 @@
                                 <h2 class="text-light display-6">Supression de votre compte</h2>
                             </div>
                             <div class="card-body card-block">
-                                <form action="" method="post" class="form-horizontal">
+                                <form id="dele" action="" method="post" class="form-horizontal">
                                     <div class="row form-group">
                                         <div class="col col-md-3">
                                             <label for="text-input" class=" form-control-label">Pseudo</label>
@@ -165,6 +178,19 @@
                                         </button>
                                     </div>
                                 </form>
+                                <script>
+                                    $( "#dele" ).submit(function( event ) {
+                                        event.preventDefault();
+                                        $.ajax({
+                                            type: "POST",
+                                            url: "delete.php",
+                                            data: $("#dele").serialize(),
+                                            success: function (data) {
+                                                eval(data);
+                                            },
+                                        });
+                                    });
+                                </script>
                             </div>
                         </div>
                     </div>

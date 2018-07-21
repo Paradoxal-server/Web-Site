@@ -78,7 +78,12 @@ class C_DataBase
         $request->execute(array($pseudo));
         return $request->fetch(PDO::FETCH_ASSOC);
     }
-
+    public function get_user_info_security_by_id($id)
+    {
+        $request = $this->M_BDD->prepare("SELECT * FROM user WHERE id=?");
+        $request->execute(array($id));
+        return $request->fetch(PDO::FETCH_ASSOC);
+    }
     public function get_id_info($pseudo,$id)
     {
         $request = $this->M_BDD->prepare("SELECT * FROM user WHERE Pseudo=? AND id=?");
@@ -162,6 +167,11 @@ class C_DataBase
         $request = $this->M_BDD->prepare("SELECT id_world FROM user WHERE id=?");
         $request->execute(array($id));
         return $request->fetch(PDO::FETCH_ASSOC);
+    }
+    public function delete_user($id)
+    {
+        $reuquest = $this->M_BDD->prepare("DELETE FROM user WHERE id=?");
+        $reuquest->execute(array($id));
     }
     public function __destruct()
     {

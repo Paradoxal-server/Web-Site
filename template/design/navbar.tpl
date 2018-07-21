@@ -23,7 +23,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="logout.php"><i class="fas fa-power-off"></i></a>
+                        <a id="logout" ><i class="fas fa-power-off"></i></a>
                     </li>
                     {else}
                         <li><a href="index.php?page=web_espace.tpl"><i class="fas fa-power-off"></i></a></li>
@@ -31,7 +31,19 @@
                 </ul>
             </div>
         </nav>
-
+<script>
+    $( "#logout" ).click(function( event ) {
+        event.preventDefault();
+        $.ajax({
+            type: "POST",
+            url: "logou.php",
+            data: $("#logout").serialize(),
+            success: function (data) {
+                eval(data);
+            },
+        });
+    });
+</script>
         <!-- / Nav -->
 
 
