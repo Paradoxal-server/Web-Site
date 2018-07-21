@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dc1ac7cf-a984-47e2-8954-de6adf18fe0f" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/template/page/rules.tpl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/page/rules.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/template/page/rules.tpl" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -100,7 +100,11 @@
       </file>
       <file leaf-file-name="rules.tpl" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/template/page/rules.tpl">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="646">
+              <caret line="38" column="106" selection-start-line="38" selection-start-column="106" selection-end-line="38" selection-end-column="106" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file leaf-file-name="new" pinned="false" current-in-tab="false">
@@ -115,8 +119,8 @@
       <file leaf-file-name="menbre.tpl" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/template/page/menbre.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="561">
-              <caret line="33" column="64" selection-start-line="33" selection-start-column="64" selection-end-line="33" selection-end-column="64" />
+            <state relative-caret-position="119">
+              <caret line="7" column="24" lean-forward="true" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="81" />
             </state>
           </provider>
         </entry>
@@ -191,6 +195,7 @@
       <find>def</find>
       <find>dropdown-menu</find>
       <find>dropdown-ite</find>
+      <find>wa</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -244,6 +249,7 @@
         <option value="$PROJECT_DIR$/template/design/msgPage.tpl" />
         <option value="$PROJECT_DIR$/template/design/navbar.tpl" />
         <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/template/page/rules.tpl" />
       </list>
     </option>
   </component>
@@ -371,12 +377,12 @@
       <workItem from="1532014946132" duration="5503000" />
       <workItem from="1532020525086" duration="8895000" />
       <workItem from="1532101688006" duration="14471000" />
-      <workItem from="1532161003510" duration="1253000" />
+      <workItem from="1532161003510" duration="2932000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="80661000" />
+    <option name="totallyTimeSpent" value="82340000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -644,21 +650,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/template/page/menbre.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="33" column="64" selection-start-line="33" selection-start-column="64" selection-end-line="33" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://56a66535-c679-4558-a9ac-a66b1a637ca8/schema/para/table/world">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://56a66535-c679-4558-a9ac-a66b1a637ca8/schema/para/table/new">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
@@ -710,8 +702,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="das://56a66535-c679-4558-a9ac-a66b1a637ca8/schema/para/table/new">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/page/menbre.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="24" lean-forward="true" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="81" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/template/page/rules.tpl">
-      <provider selected="true" editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="38" column="106" selection-start-line="38" selection-start-column="106" selection-end-line="38" selection-end-column="106" />
+        </state>
+      </provider>
     </entry>
   </component>
 </project>
