@@ -11,7 +11,7 @@
                     <li><a href="index.php?page=web_play.tpl"><i class="fas fa-info-circle"></i> Rejoindre le serveur</a></li>
                     <li><a href="index.php?page=web_menbre.tpl"><i class="fas fa-user"></i> Menbre du serveur</a></li>
                     <li><a href="index.php?page=web_staff.tpl"><i class="fas fa-star"></i> Staff</a></li>
-                    <li><a href="index.php?page=web_rules.php"><i class="fas fa-book"></i> Régles</a></li>
+                    <li><a href="index.php?page=web_rules.tpl"><i class="fas fa-book"></i> Régles</a></li>
                     {if $val.user.Permission >= 8}
                         <li><a href="#!"><i class="fas fa-unlock-alt"></i> Panneaux d'administration</a></li>
                     {/if}

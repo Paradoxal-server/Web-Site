@@ -236,10 +236,6 @@
                 $Smarty->assign("paget","world.tpl");
                 $Smarty->display("web_index.tpl");
             }
-            else
-            {
-                header("Location:index.php");
-            }
         }
         else if($_GET['page'] == "web_staff.tpl")
         {
@@ -273,6 +269,22 @@
             $Smarty->assign("val", $var_index);
             $Smarty->assign("paget", "staff.tpl");
             $Smarty->display("web_index.tpl");
+        }
+        else if($_GET['page'] == "web_rules.tpl")
+        {
+
+        }
+        else
+        {
+            $val_erorr = array();
+            $val_erorr['erreur'] = "Page non trouver";
+
+            $Smarty->assign("val",$val_erorr);
+            try {
+                $Smarty->display("template/error/error.tpl");
+            } catch (SmartyException $e) {
+                echo $e->getMessage();
+            }
         }
     }
     else
