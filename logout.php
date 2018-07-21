@@ -7,4 +7,5 @@
  */
 session_start();
 session_destroy();
-header("Location:index.php");
+
+echo 'swal({title: "Vous êtez deconnectez!",text: "vous allez redirigez dans 2s!", type: "success",timer: 2000, confirmButtonText:"Ok", showConfirmButton: false}).then(function() { window.location = "../index.php";});';
