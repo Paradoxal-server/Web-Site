@@ -72,7 +72,7 @@
                 $var_user['id'] = $_SESSION['id'];
             }
 
-            $var_index['title_page'] = "Accueil | " . $var_base['Title'];
+            $var_index['title_page'] = "Connection/Inscription | " . $var_base['Title'];
             $var_index['title'] = $var_base['Title'];
 
             $var_msg = array();
@@ -107,7 +107,7 @@
                 $var_user['id'] = $_SESSION['id'];
             }
 
-            $var_index['title_page'] = "Accueil | " . $var_base['Title'];
+            $var_index['title_page'] = "Rejoindre le serveur | " . $var_base['Title'];
             $var_index['title'] = $var_base['Title'];
 
             $var_msg = array();
@@ -142,7 +142,7 @@
                 $var_user['id'] = $_SESSION['id'];
             }
 
-            $var_index['title_page'] = "Accueil | " . $var_base['Title'];
+            $var_index['title_page'] = "Liste des menbres | " . $var_base['Title'];
             $var_index['title'] = $var_base['Title'];
 
             $var_msg = array();
@@ -272,7 +272,35 @@
         }
         else if($_GET['page'] == "web_rules.tpl")
         {
+            $var_index = array();
+            $var_index['title_page'] = "Régles | " . $var_base['Title'];
+            $var_index['title'] = $var_base['Title'];
+            $var_user['connect'] = -1;
+            if (isset($_SESSION['id'])) {
+                $json = file_get_contents('https://api.mojang.com/users/profiles/minecraft/' . $_SESSION['pseudo']);
+                if (!empty($json)) {
+                    $data = json_decode($json, true);
+                    if (is_array($data) and !empty($data)) {
+                        $var_user["uuid"] = $data['id'];
 
+                    }
+                }
+
+                $var_user['connect'] = 1;
+                $var_user['pseudo'] = $_SESSION['pseudo'];
+                $rang_info = $DataBase->get_rang($_SESSION['pseudo']);
+                $var_user['Permission'] = $rang_info['Permission'];
+                $var_user['id'] = $_SESSION['id'];
+
+            }
+            $var_index['user'] = $var_user;
+            $var_msg = array();
+            $var_msg['heading'] = "Bienvenu sur  le serveur " . $var_base['Title'];
+            $var_msg['body'] = "Bonjour à tous et merci de venir voir le site du serveur paradoxal<br>Un serveur moddé avec 59 mods, fait par des amis qui aime minecraft entre amis";
+            $var_index['msg'] = $var_msg;
+            $Smarty->assign("val", $var_index);
+            $Smarty->assign("paget", "rules.tpl");
+            $Smarty->display("web_index.tpl");
         }
         else
         {
