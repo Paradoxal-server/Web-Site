@@ -302,6 +302,17 @@
             $Smarty->assign("paget", "rules.tpl");
             $Smarty->display("web_index.tpl");
         }
+        else if($_GET['page'])
+        {
+            if(isset($_SESSION['id']))
+            {
+                header("Location: panel_user/index.php");
+            }
+            else
+            {
+                header("Location: index.php");
+            }
+        }
         else
         {
             $val_erorr = array();
